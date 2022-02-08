@@ -1,0 +1,75 @@
+*{
+    text-align: center;
+}
+
+body {
+    background-color: #181818;
+    font-family: 'Roboto', sans-serif;
+}
+
+h1{
+    font-size: 60px;
+    color: #CC4774;
+    margin: 0px;
+    margin-top: 15px;
+    font-weight: 300;
+}
+
+h3 {
+    color: White;
+    margin: 0px;
+    margin-top: 15px;
+    font-weight: 300;
+}
+
+#tablero {
+    margin: 0 auto;
+    display: inline-block;
+}
+
+.botones > button{
+    background-color: rgba(255, 255, 255, 0.6);
+    font-size: 18px;
+    padding: 10px;
+    width: 160px;
+    border: none;
+    border-radius: 10px;
+    margin: 20px;
+    font-weight: 300;
+    outline: none;
+    cursor: pointer;
+}
+
+.botones > button:hover {
+    background: pink;
+    font-weight: 400;
+    color: white;
+}
+
+.fw-color-pink {
+    color: pink;
+}
+
+.reglas {
+    margin: 21px;
+    font-size: 18px;
+    color: pink;
+}
+
+td {
+    border: 1px solid white;
+    width: 20px;
+    height: 20px;
+}
+
+table {
+    border-spacing: 0;
+}
+
+td.muerta {
+    background-color: transparent;
+}
+
+td.viva {
+    background-color: #CC4774;
+}
