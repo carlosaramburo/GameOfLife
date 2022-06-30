@@ -7,28 +7,28 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <link rel="icon" href="favicon.png" type="png" />
-    <title>Juego de la Vida</title>
+    <title>Conway's Game of Life</title>
 </head>
 <body>
     <div id="header">
-        <h1>Juego de la Vida</h1>
-        <h3>Por Carlos Arámburo y José Carlos Chavarín</h3>
-        <h3 id="generacion" class="fw-color-pink">Generación: 1</h3>
+        <h1>Conway's Game of Life</h1>
+        <h3>By Carlos Arámburo and José Carlos Chavarín</h3>
+        <h3 id="generation" class="fw-color-pink">Generation: 1</h3>
     </div>
-    <div class="botones">
-        <button id="iniciar">Iniciar</button>
-        <button id="pausa">Pausar</button>
-        <button id="limpiar">Limpiar</button>
-        <button id="random">Aleatorio</button>
+    <div class="buttons">
+        <button id="start">Start</button>
+        <button id="pause">Pause</button>
+        <button id="clear">Clear</button>
+        <button id="random">Random</button>
     </div>
-    <div class="reglas">
-        <div>Reglas:</div>
-        <div>1.- Si una célula está viva y tiene dos o tres vecinas vivas, sobrevive.</div>
-        <div>2.- Si una célula está muerta y tiene tres vecinas vivas, nace.</div>
-        <div>3.- Si una célula está viva y tiene más de tres vecina vivas, muere.</div>
+    <div class="rules">
+        <div>Rules:</div>
+        <div>1.- If a cell is alive and has two or three living neighbors, it survives.</div>
+        <div>2.- If a cell is dead and has three living neighbors, it becomes a living cell.</div>
+        <div>3.- If a cell is alive and has more than three live neighbors, it dies.</div>
     </div>
-    <div id="tablero"></div>
+    <div id="board"></div>
 </body>
-<script src="JuegoDeLaVida.js"></script>
+<script src="GameOfLife.js"></script>
 <script src="index.js"></script>
 </html>

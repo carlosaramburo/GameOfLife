@@ -22,12 +22,12 @@ h3 {
     font-weight: 300;
 }
 
-#tablero {
+#board {
     margin: 0 auto;
     display: inline-block;
 }
 
-.botones > button{
+.buttons > button {
     background-color: rgba(255, 255, 255, 0.6);
     font-size: 18px;
     padding: 10px;
@@ -40,7 +40,7 @@ h3 {
     cursor: pointer;
 }
 
-.botones > button:hover {
+.buttons > button:hover {
     background: pink;
     font-weight: 400;
     color: white;
@@ -50,7 +50,7 @@ h3 {
     color: pink;
 }
 
-.reglas {
+.rules {
     margin: 21px;
     font-size: 18px;
     color: pink;
@@ -66,10 +66,10 @@ table {
     border-spacing: 0;
 }
 
-td.muerta {
+td.dead {
     background-color: transparent;
 }
 
-td.viva {
+td.alive {
     background-color: #CC4774;
 }

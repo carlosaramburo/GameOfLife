@@ -1,44 +1,45 @@
-const juego = new JuegoDeLaVida();
+const game = new GameOfLife();
 
 window.onload = () => {
 
-    let generacion = 1;
-    let estado;
-    let pausa = false;
-    const tiempo = 300;
+    let generation = 1;
+    let state;
+    let pause = false;
+    const time = 300;
 
-    juego.preparar();
+    game.prepare();
 
-    document.getElementById("iniciar").addEventListener("click", () => {
-        if(pausa == false) {
-            generacion = 1;
+    document.getElementById("start").addEventListener("click", () => {
+        if(pause == false) {
+            generation = 1;
         }
-        clearTimeout(estado);
-        estado = window.setInterval(() => {
-            generacion += 1;
-            document.getElementById("generacion").innerHTML = "Generación: " + generacion;
-            juego.iniciar();
-        }, tiempo);
+        clearTimeout(state);
+        state = window.setInterval(() => {
+            generation += 1;
+            document.getElementById("generation").innerHTML = "Generation: " + generation;
+            game.start();
+        }, time);
     })
 
-    document.getElementById("limpiar").addEventListener("click", () => {
-        pausa = true;
-        clearInterval(estado);
-        document.getElementById("generacion").innerHTML = "Generación: 1";
-        juego.limpiarArrays();
-        generacion = 1;
+    document.getElementById("clear").addEventListener("click", () => {
+        pause = true;
+        clearInterval(state);
+        document.getElementById("generation").innerHTML = "Generation: 1";
+        game.resetArrays();
+        generation = 1;
     })
 
-    document.getElementById("pausa").addEventListener("click", () => {
-        pausa = true;
-        juego.resetGrid();
-        clearInterval(estado);
+    document.getElementById("pause").addEventListener("click", () => {
+        pause = true;
+        game.resetGrid();
+        clearInterval(state);
     });
 
     document.getElementById("random").addEventListener("click", () => {
-        pausa = false;
-        clearInterval(estado);
-        juego.limpiarArrays();
-        juego.aleatorio();
+        pause = false;
+        clearInterval(state);
+        document.getElementById("generation").innerHTML = "Generation: 1";
+        game.resetArrays();
+        game.random();
     });
 }
